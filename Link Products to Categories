@@ -1,0 +1,3 @@
+
+ALTER TABLE Products
+ADD CONSTRAINT FK_Category FOREIGN KEY (Category) REFERENCES Categories(CategoryName);
