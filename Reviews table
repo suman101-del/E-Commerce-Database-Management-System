@@ -1,0 +1,16 @@
+
+CREATE TABLE Reviews (
+    ReviewID INT AUTO_INCREMENT PRIMARY KEY,
+    ProductID INT NOT NULL,
+    UserID INT NOT NULL,
+    Rating INT CHECK (Rating BETWEEN 1 AND 5),
+    Comment TEXT,
+    ReviewDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+-- Insert values into Reviews table
+INSERT INTO Reviews (ProductID, UserID, Rating, Comment) VALUES
+(1, 1, 5, 'Excellent product!'),
+(2, 2, 4, 'Very good, but could be cheaper.');
