@@ -1,0 +1,15 @@
+CREATE TABLE Users (
+    UserID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    PasswordHash VARCHAR(255) NOT NULL,
+    PhoneNumber VARCHAR(15),
+    Address TEXT,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert values into Users table
+INSERT INTO Users (FirstName, LastName, Email, PasswordHash, PhoneNumber, Address) VALUES
+('suman', 'Dolai', 'suma.doe@example.com', 'hashedpassword1', '1234567890', '123 hyd St'),
+('sri', 'ram', 'Sri.smith@example.com', 'hashedpassword2', '0987654321', '456 VIzag Ave');
