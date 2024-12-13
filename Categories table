@@ -1,0 +1,11 @@
+
+CREATE TABLE Categories (
+    CategoryID INT AUTO_INCREMENT PRIMARY KEY,
+    CategoryName VARCHAR(50) NOT NULL UNIQUE,
+    Description TEXT
+);
+
+-- Insert values into Categories table
+INSERT INTO Categories (CategoryName, Description) VALUES
+('Electronics', 'Electronic devices and gadgets'),
+('Books', 'Various genres of books');
